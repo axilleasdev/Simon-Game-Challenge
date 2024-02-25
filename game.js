@@ -6,13 +6,36 @@ var gamePattern = [];
 var level = 0;
 var gameStarted = false;
 
+
 $(document).keypress(function () {
   if (!gameStarted) {
-    gameStarted = true;
-    $("#level-title").text("Level 0");
-    nextSequence();
+    startGame();
   }
 });
+
+$("#start-button").click(function () {
+  if (!gameStarted) {
+    startGame();
+  }
+});
+
+function startGame() {
+  gameStarted = true;
+  $("#level-title").text("Level 0");
+  nextSequence();
+}
+
+
+
+
+//$(document).keypress(function () {
+  //if (!gameStarted) {
+    //gameStarted = true;
+    //$("#level-title").text("Level 0");
+    //nextSequence();
+  //}
+//});
+
 
 function nextSequence() {
 
