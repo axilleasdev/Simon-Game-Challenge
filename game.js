@@ -13,7 +13,7 @@ $(document).keypress(function () {
   }
 });
 
-$("#start-button").click(function () {
+$(document).click(function () {
   if (!gameStarted) {
     startGame();
   }
